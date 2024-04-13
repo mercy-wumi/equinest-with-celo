@@ -1,37 +1,47 @@
+import React from "react";
+import Hero from "../components/Hero";
+import MainHero from "../components/MainHero";
+import ChooseBetter from "../components/ChooseBetter";
+import Navbar from "../components/OldNavbar";
+import Products from "../components/Products";
+import OurVision from "../components/OurVision";
+import OurTarget from "../components/OurTarget";
+import OurCustomers from "../components/OurCustomers";
+import Subscribe from "../components/Subscribe";
+import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 
-export default function Home() {
+const Homepage = () => {
+
     const [userAddress, setUserAddress] = useState("");
-    const [isMounted, setIsMounted] = useState(false);
-    const { address, isConnected } = useAccount();
+		const [isMounted, setIsMounted] = useState(false);
+		const { address, isConnected } = useAccount();
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
+		useEffect(() => {
+			setIsMounted(true);
+		}, []);
 
-    useEffect(() => {
-        if (isConnected && address) {
-            setUserAddress(address);
-        }
-    }, [address, isConnected]);
+		useEffect(() => {
+			if (isConnected && address) {
+				setUserAddress(address);
+			}
+		}, [address, isConnected]);
 
-    if (!isMounted) {
-        return null;
-    }
+		if (!isMounted) {
+			return null;
+		}
+	return (
+		<div className="overflow-x-hidden overflow-y-scroll">
+			<MainHero />
+			<ChooseBetter />
+			<Products />
+			<OurVision />
+			<OurTarget />
+			<OurCustomers />
+			<Subscribe />
+		</div>
+	);
+};
 
-    return (
-        <div className="flex flex-col justify-center items-center">
-            <div className="h1">
-                There you go... a canvas for your next Celo project!
-            </div>
-            {isConnected ? (
-                <div className="h2 text-center">
-                    Your address: {userAddress}
-                </div>
-            ) : (
-                <div>No Wallet Connected</div>
-            )}
-        </div>
-    );
-}
+export default Homepage;

@@ -26,5 +26,9 @@
     "keywords": [
         "celo-composer",
         "celo"
-    ]
+    ],
+    "dependencies": {
+        "react-hook-form": "^7.51.1",
+        "yarn": "^1.22.22"
+    }
 }

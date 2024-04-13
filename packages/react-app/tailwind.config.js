@@ -1,34 +1,25 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        /** primary */
-        "prosperity": "#FCFF52",
-        "forest": "#476520",
-        /** base */
-        "gypsum": "#FCF6F1",
-        "sand": "#E7E3D4",
-        "wood": "#655947",
-        "fig": "#1E002B",
-        /** functional */
-        "snow": "#FFFFFF",
-        "onyx": "#000000",
-        "success": "#329F3B",
-        "error": "#E70532",
-        "disabled": "#9B9B9B",
-        /** accent */
-        "sky": "#7CC0FF",
-        "citrus": "#FF9A51",
-        "lotus": "#FFA3EB",
-        "lavender": "#B490FF"
-      }
-    },
-  },
-  plugins: [],
-}
+export default {
+	content: [
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+	],
+	theme: {
+		extend: {},
+		colors: {
+			primaryYellow: "#FFC700",
+			gray: "#C0C0C0",
+			primaryBlack: "#191919",
+			lightGray: "#464545",
+			darkGray: "#282828",
+			white: "#ffffff",
+			green: "#039D00",
+			red: "#FF1709",
+			lighterGray: "#EDEDED",
+			borderJoinedComm: "#CACACA",
+		},
+	},
+	plugins: [],
+};
+

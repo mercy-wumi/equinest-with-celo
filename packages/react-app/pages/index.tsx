@@ -1,14 +1,12 @@
 import React from "react";
-import Hero from "../components/Hero";
 import MainHero from "../components/MainHero";
 import ChooseBetter from "../components/ChooseBetter";
-import Navbar from "../components/OldNavbar";
 import Products from "../components/Products";
 import OurVision from "../components/OurVision";
 import OurTarget from "../components/OurTarget";
 import OurCustomers from "../components/OurCustomers";
 import Subscribe from "../components/Subscribe";
-import Footer from "../components/Footer";
+import MainLayout from "@/Layouts/MainLayout";
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 
@@ -33,13 +31,15 @@ const Homepage = () => {
 		}
 	return (
 		<div className="overflow-x-hidden overflow-y-scroll">
-			<MainHero />
-			<ChooseBetter />
-			<Products />
-			<OurVision />
-			<OurTarget />
-			<OurCustomers />
-			<Subscribe />
+			<MainLayout>
+				<MainHero />
+				<ChooseBetter />
+				<Products />
+				<OurVision />
+				<OurTarget />
+				<OurCustomers />
+				<Subscribe />
+			</MainLayout>
 		</div>
 	);
 };

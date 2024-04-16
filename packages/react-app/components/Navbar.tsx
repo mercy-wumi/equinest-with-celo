@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useConnect } from "wagmi";
 import { injected } from "wagmi/connectors";
 
-export default function Header() {
+export default function Navbar() {
 	const [hideConnectBtn, setHideConnectBtn] = useState(false);
 	const { connect } = useConnect();
 

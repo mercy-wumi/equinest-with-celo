@@ -4,8 +4,8 @@ import Image from "next/image";
 interface Community {
 	title: string;
 	img: string;
-	subtitle: string;
-	subtitle2: string;
+	subtitle?: string;
+	subtitle2?: string;
 }
 
 interface Props {

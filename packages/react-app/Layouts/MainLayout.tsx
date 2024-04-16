@@ -1,15 +1,15 @@
 import { FC, ReactNode } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 interface Props {
 	children: ReactNode;
 }
-const Layout: FC<Props> = ({ children }) => {
+const MainLayout: FC<Props> = ({ children }) => {
 	return (
 		<>
 			<div className="overflow-hidden flex flex-col min-h-screen">
-				<Header />
+				<Navbar />
 				<div className="">{children}</div>
 				<Footer />
 			</div>
@@ -17,4 +17,4 @@ const Layout: FC<Props> = ({ children }) => {
 	);
 };
 
-export default Layout;
+export default MainLayout;

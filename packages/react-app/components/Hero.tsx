@@ -22,12 +22,6 @@ const Hero = () => {
 						<span>management</span>
 					</p>
 				</div>
-
-				<div>
-					<Link href="/signup">
-						<PrimaryButton text="Get Started" />
-					</Link>
-				</div>
 				<div>
 					<Image src={heroImg} alt="equinest Logo" />
 				</div>
